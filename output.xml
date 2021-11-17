@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.2 (Python 3.9.9 on win32)" generated="20211117 13:46:35.031" rpa="false" schemaversion="2">
+<suite id="s1" name="WikipediaTest" source="C:\Users\ana.rocha\Documents\Estudos\Robot Framework\Wikipedia\WikipediaTest.robot">
+<test id="s1-t1" name="Caso de Teste 01: Pesquisar Algo">
+<kw name="Acessar a página" library="ResourceWikipediaTest">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>url=${URL}</arg>
+<arg>browser=${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20211117 13:46:35.407" level="INFO">Opening browser 'chrome' to base url 'https://pt.wikipedia.org/wiki/Wikip%C3%A9dia:P%C3%A1gina_principal'.</msg>
+<status status="PASS" starttime="20211117 13:46:35.406" endtime="20211117 13:46:39.948"/>
+</kw>
+<kw name="Set Window Size" library="SeleniumLibrary">
+<arg>width=${WIDTH}</arg>
+<arg>height=${HEIGHT}</arg>
+<doc>Sets current windows size to given ``width`` and ``height``.</doc>
+<status status="PASS" starttime="20211117 13:46:39.948" endtime="20211117 13:46:40.118"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Wikipédia, a enciclopédia livre</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20211117 13:46:40.138" level="INFO">Page title is 'Wikipédia, a enciclopédia livre'.</msg>
+<status status="PASS" starttime="20211117 13:46:40.119" endtime="20211117 13:46:40.138"/>
+</kw>
+<status status="PASS" starttime="20211117 13:46:35.406" endtime="20211117 13:46:40.138"/>
+</kw>
+<kw name="Pesquisar por &quot;Nebulosa&quot;" library="ResourceWikipediaTest" sourcename="Pesquisar por &quot;${VALUE_SEARCH}&quot;">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${INPUT_SEARCH}</arg>
+<arg>${VALUE_SEARCH}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211117 13:46:40.140" level="INFO">Typing text 'Nebulosa' into text field 'name=search'.</msg>
+<status status="PASS" starttime="20211117 13:46:40.140" endtime="20211117 13:46:40.280"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20211117 13:46:40.281" level="INFO">Sending key(s) ('ENTER',) to page.</msg>
+<msg timestamp="20211117 13:46:40.281" level="INFO">Pressing special key ENTER to browser.</msg>
+<msg timestamp="20211117 13:46:40.281" level="INFO">Releasing special key ENTER.</msg>
+<status status="PASS" starttime="20211117 13:46:40.280" endtime="20211117 13:46:41.983"/>
+</kw>
+<status status="PASS" starttime="20211117 13:46:40.139" endtime="20211117 13:46:41.983"/>
+</kw>
+<kw name="Conferir Resultado por &quot;Nebulosa&quot;" library="ResourceWikipediaTest" sourcename="Conferir Resultado por &quot;${VALUE_SEARCH}&quot;">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>${VALUE_SEARCH}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20211117 13:46:41.985" endtime="20211117 13:46:42.050"/>
+</kw>
+<status status="PASS" starttime="20211117 13:46:41.984" endtime="20211117 13:46:42.050"/>
+</kw>
+<status status="PASS" starttime="20211117 13:46:35.405" endtime="20211117 13:46:42.051"/>
+</test>
+<status status="PASS" starttime="20211117 13:46:35.034" endtime="20211117 13:46:42.053"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="WikipediaTest">WikipediaTest</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
